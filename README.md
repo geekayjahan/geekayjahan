@@ -29,7 +29,7 @@ Each repo is the working material from a live lesson, so you can rebuild the dem
 
 | Project | What it does |
 |---|---|
-| [mise](https://github.com/geekayjahan/mise) | The workspace I run both businesses from. One grid of every lead and customer, where each fact shows its source and age, and background jobs keep mail, leads and the books current. Source is private. [4-minute demo](https://www.loom.com/share/e3558290ddee467c9e2ee1bb72354acf) |
+| [mise](https://github.com/geekayjahan/mise) | The workspace I run both businesses from. One grid of every lead and customer, where each fact shows its source and age, and background jobs keep mail, leads and the books current. Source is private. [3-minute demo](https://github.com/geekayjahan/mise/blob/main/demo/mise-demo.mp4), or [my own walkthrough on Loom](https://www.loom.com/share/e3558290ddee467c9e2ee1bb72354acf) |
 | [followthrough](https://github.com/geekayjahan/followthrough) | My entry to the Meta Global AI Developer Hackathon. A WhatsApp back office for owner-run businesses that tracks every open deal and drafts the next move for approval. [3-minute demo](https://youtu.be/WgxoR8faiuA) |
 | [gks-exec-assistant](https://github.com/geekayjahan/gks-exec-assistant) | A project manager plugin for Claude, with portable templates for other platforms |
 | [omnisavant](https://github.com/geekayjahan/omnisavant) | A dashboard that classifies how AI companies build lasting advantages |
