@@ -1,8 +1,31 @@
 # Hi, I'm GK
 
-I'm Gayathri Keerthana (GK), an ex-Amazon Senior Product Manager. I teach product managers and engineers spec engineering: writing down what you want built so precisely that AI agents can build it correctly, with evals that prove the build works. My students start from a real problem at work and finish with a spec, a deployed app and the tests behind it.
+I'm Gayathri Keerthana (GK), an ex-Amazon Senior Product Manager. I build AI agent products for my own two businesses and for clients, and I teach the method I build with. The method is spec engineering: writing down what you want built so precisely that AI agents can build it correctly, with evals that prove the build works.
 
-This profile holds the free kits from my lessons and the things I build with the same method.
+This profile holds the things I have built that way, how I keep them safe, and the free kits from my lessons.
+
+## Things I've built
+
+| Project | What it does | Proof |
+|---|---|---|
+| [followthrough](https://github.com/geekayjahan/followthrough) | My entry to the Meta Global AI Developer Hackathon. A WhatsApp back office for owner-run businesses that tracks every open deal and drafts the next move for approval. [3-minute demo](https://youtu.be/WgxoR8faiuA) | 97 automated checks run on every push. An approval is tied to the exact draft, so an edited draft cancels the earlier yes. [Controls and known limits](https://github.com/geekayjahan/followthrough/blob/main/SECURITY.md) |
+| [mise](https://github.com/geekayjahan/mise) | The workspace I run both businesses from. One grid of every lead and customer, where each fact shows its source and age, and background jobs keep mail, leads and the books current. Source is private. [3-minute demo](https://github.com/geekayjahan/mise/blob/main/demo/mise-demo.mp4), or [my own walkthrough on Loom](https://www.loom.com/share/e3558290ddee467c9e2ee1bb72354acf) | A fact past its shelf life shows as unknown. Nothing is sent or posted without my approval. |
+| SEO audit tool for an agency client | A prospect's URL goes in and a shareable six-pillar audit comes back in under five minutes, for use on live sales calls. In production since November 2026. Source is private because it is client work. | 80 written acceptance checks. Three graded eval runs took failed checks from 4 to 0. Any AI finding the crawl cannot support is dropped before it is stored, and each report runs under a £1 cost ceiling. |
+| [gks-exec-assistant](https://github.com/geekayjahan/gks-exec-assistant) | A project manager plugin for Claude, with portable templates for other platforms | |
+| [omnisavant](https://github.com/geekayjahan/omnisavant) | A dashboard that classifies how AI companies build lasting advantages | |
+
+## How I keep them safe
+
+An agent that reads messages and writes to real systems needs controls you can point to in the code. These are the rules I build to. followthrough is the public example, and each row names what is in its code today.
+
+| Rule | How it shows up in followthrough |
+|---|---|
+| Nothing leaves without a person's yes | The agent drafts and the owner approves. The approval is bound to a hash of the exact draft. |
+| Outside content is data, never instructions | WhatsApp and email text reaches the model labelled as untrusted, and the answer must fit a fixed shape before the app acts on it. |
+| Keys never touch the repo | Secrets live only in the host's variables, and two secret scans run on every push. |
+| History is checked as well as the current files | A privacy test reads every commit, because a file can be clean while an older commit still publishes the data. |
+| Dependencies are watched | Dependabot proposes updates weekly, CI fails on a high-severity advisory, and every GitHub Action is pinned to a commit. |
+| Limits are written down | [SECURITY.md](https://github.com/geekayjahan/followthrough/blob/main/SECURITY.md) lists what is not yet covered, next to what is. |
 
 ## Learn with me on Maven
 
@@ -24,15 +47,6 @@ Each repo is the working material from a live lesson, so you can rebuild the dem
 | [ai-chief-of-staff-lesson](https://github.com/geekayjahan/ai-chief-of-staff-lesson) | Build Your Own AI Chief of Staff | Two prompts and a Claude project that brief you every weekday morning |
 | [ai-chief-of-staff](https://github.com/geekayjahan/ai-chief-of-staff) | Template version | Six prompts for Claude Code that end with your own installed plugin |
 | [skills](https://github.com/geekayjahan/skills) | AI Bar Raiser post on agent files | A skill that builds and audits other Claude skills |
-
-## Things I've built
-
-| Project | What it does |
-|---|---|
-| [mise](https://github.com/geekayjahan/mise) | The workspace I run both businesses from. One grid of every lead and customer, where each fact shows its source and age, and background jobs keep mail, leads and the books current. Source is private. [3-minute demo](https://github.com/geekayjahan/mise/blob/main/demo/mise-demo.mp4), or [my own walkthrough on Loom](https://www.loom.com/share/e3558290ddee467c9e2ee1bb72354acf) |
-| [followthrough](https://github.com/geekayjahan/followthrough) | My entry to the Meta Global AI Developer Hackathon. A WhatsApp back office for owner-run businesses that tracks every open deal and drafts the next move for approval. [3-minute demo](https://youtu.be/WgxoR8faiuA) |
-| [gks-exec-assistant](https://github.com/geekayjahan/gks-exec-assistant) | A project manager plugin for Claude, with portable templates for other platforms |
-| [omnisavant](https://github.com/geekayjahan/omnisavant) | A dashboard that classifies how AI companies build lasting advantages |
 
 ## Experience
 
